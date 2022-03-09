@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:text="p="
+                tools:ignore="HardcodedText"
+                android:textSize="22sp"/>
+
+            <EditText
+                android:id="@+id/editTextP"
+                android:layout_height="48dp"
+                android:importantForAutofill="no"
+                android:inputType="number|numberDecimal"
+                android:minWidth="50dp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:text="n="
+                tools:ignore="HardcodedText"
+                android:gravity="end"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/editTextN"
+                android:layout_height="48dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minWidth="50dp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                android:textSize="22sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="k="
+                tools:ignore="HardcodedText"
+                android:textSize="22sp"/>
+
+            <EditText
+                android:id="@+id/editTextK"
+                android:layout_height="48dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minWidth="50dp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                android:textSize="22sp"/>
+            <TextView
+                android:text="round="
+                tools:ignore="HardcodedText"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp"/>
+
+            <EditText
+                android:id="@+id/editTextRound"
+                android:layout_height="48dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minWidth="50dp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                android:textSize="22sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/elevation"
+        android:text="calculate"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+        <com.gazim.binomialdistributionofadrv.MathJaxWebView
+            android:id="@+id/WebView"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+            android:minHeight="200dp"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
